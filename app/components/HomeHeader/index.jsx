@@ -10,12 +10,12 @@ class HomeHeader extends React.Component {
     render() {
         return (
             <div className="HeaderPart">
-                <div>
+                <div className="cityName">
                     杭州
                 </div>
-                <div><input /></div>
-                <div>
-                    <i className="icon-user"></i>
+                <div className="searchPart"><input placeholder="请输入关键字"/></div>
+                <div className="userBtn">
+                    我的
                 </div>
             </div>
         )

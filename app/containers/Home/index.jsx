@@ -4,6 +4,7 @@ import HomeHeader from '../../components/HomeHeader/index'
 import {connect} from 'react-redux'
 import Categroy from '../../components/Categroy/index'
 import AdVerTising from './subpage/AdVerTising'
+import ListPage from './subpage/ListPage'
 
 class Home extends React.Component {
     constructor(props, context) {
@@ -17,6 +18,7 @@ class Home extends React.Component {
                 <Categroy />
                 <div style={{height:'15px'}}></div>
                 <AdVerTising />
+                <ListPage cityName={this.props.userinfo.cityName}/>
             </div>
         )
     }

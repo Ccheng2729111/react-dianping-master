@@ -11,7 +11,7 @@ class HomeHeader extends React.Component {
         return (
             <div className="HeaderPart">
                 <div className="cityName">
-                    杭州
+                    {this.props.cityName}
                 </div>
                 <div className="searchPart"><input placeholder="请输入关键字"/></div>
                 <div className="userBtn">

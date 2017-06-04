@@ -4,7 +4,7 @@ import localStore from '../util/localStore'
 import {CITYNAME} from '../config/localStoreKey'
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
-import * as userInfoAction from '../actions/userinfo'
+import * as userInfoActionFromOther from '../actions/userinfo'
 
 
 class App extends React.Component {
@@ -31,16 +31,13 @@ class App extends React.Component {
         if(cityName === null){
             cityName = "杭州"
         }
-        console.log(cityName)
-
-        this.props.userInfoAction.update({
+        this.props.userInfoActions.update({
             cityName: cityName
         })
-        setTimeout(()=> {
-            this.setState({
-                initDone:true
-            })
-        },1000)
+        console.log(this.props.userInfoActions.update)
+        this.setState({
+            initDone:true
+        })
     }
 }
  function mapStateToProps(state){
@@ -49,7 +46,7 @@ class App extends React.Component {
 
  function mapDispatchToProps(dispatch){
      return{
-        userInfoAction : bindActionCreators(userInfoAction,dispatch)
+        userInfoActions : bindActionCreators(userInfoActionFromOther,dispatch)
      }
  }
 

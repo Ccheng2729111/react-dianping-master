@@ -1,6 +1,7 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import './style.less'
+import { Link } from 'react-router'
 
 class HomeHeader extends React.Component {
     constructor(props, context) {
@@ -10,9 +11,11 @@ class HomeHeader extends React.Component {
     render() {
         return (
             <div className="HeaderPart">
-                <div className="cityName">
-                    {this.props.cityName}
-                </div>
+                <Link to="/city">
+                    <div className="cityName">
+                        {this.props.cityName}
+                    </div>
+                </Link>
                 <div className="searchPart"><input placeholder="请输入关键字"/></div>
                 <div className="userBtn">
                     我的
